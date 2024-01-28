@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mencetak Bilangan Terbesar, Terkecil, dan Rata-Rata</title>
+</head>
+<body>
+    <script>
+        let total = 0;
+        let bilTerbesar = -Infinity;
+        let bilTerkecil = Infinity;
+
+        for (let i = 1; i <= 20; i++) {
+            let input = parseFloat(prompt(`Masukkan bilangan ke-${i}: `));
+            total += input;
+
+            if (input > bilTerbesar) {
+                bilTerbesar = input;
+            }
+
+            if (input < bilTerkecil) {
+                bilTerkecil = input;
+            }
+        }
+
+        const rata2 = total / 20;
+
+
+        console.log(`Bilangan terbesar: ${bilTerbesar}`);
+        console.log(`Bilangan terkecil: ${bilTerkecil}`);
+        console.log(`Rata-rata: ${rata2}`);
+    </script>
+</body>
+</html>

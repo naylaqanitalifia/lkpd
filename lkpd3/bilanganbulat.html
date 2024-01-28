@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memisahkan Angka Satuan, Puluhan, dan Ratusan</title>
+</head>
+<body>
+    <script>
+        const bilangan = 123;
+
+        const ratusan = Math.floor(bilangan / 100);
+        const puluhan = Math.floor((bilangan % 100) / 10);
+        const satuan = bilangan % 10;
+
+        console.log(`Ratusan: ${ratusan}, Puluhan: ${puluhan}, Satuan: ${satuan}`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Tunjangan, Pajak, dan Gaji Bersih yang didapatkan oleh Karyawan</title>
+</head>
+<body>
+    <script>
+        let namaKaryawan;
+        let gajiPokok = 200000;
+        let gajiBersih;
+        let tunjangan;
+        let pajak;
+
+        tunjangan = 20 / 100 * gajiPokok;
+        pajak = 15 / 100 * (gajiPokok + tunjangan);
+        gajiBersih = gajiPokok + tunjangan - pajak;
+
+        console.log(tunjangan);
+        console.log(pajak);
+        console.log(gajiBersih); 
+    </script>
+</body>
+</html>

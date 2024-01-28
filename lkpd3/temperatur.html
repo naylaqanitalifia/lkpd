@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celcius ke Fahrenheit</title>
+</head>
+<body>
+    <script>
+        let temperaturCuaca = 40;
+        let keterangan ;
+        let fahrenheit = (temperaturCuaca * 9 / 5 + 32);
+
+        if (temperaturCuaca >= 30) {
+            keterangan = "Panas";
+        } else if (temperaturCuaca <= 25) {
+            keterangan = "Dingin";
+        } else {
+            keterangan = "Normal";
+        }
+
+        console.log(`Temperatur cuaca saat ini yaitu ${temperaturCuaca} derajat, memiliki keterangan ${keterangan} dan jika diubah ke fahrenheit menjadi ${fahrenheit} derajat`);    
+    </script>
+</body>
+</html>

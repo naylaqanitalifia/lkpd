@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mencari Juara Kelas</title>
+</head>
+<body>
+    <script>
+        const jumlahSiswa = 15;
+
+        function hitungRata2(mtk, indo, ing, dpk, agama) { 
+            return (mtk + indo + ing + dpk + agama / 5);
+        }
+
+        function cekJuaraKelas() {
+            let juaraKelas = 'Tidak ada';
+
+            for (let i = 1; i <= jumlahSiswa; i++) {
+                let mtk = parseInt(prompt(`Masukkan nilai Matematika untuk siswa ke-${i}: `))
+                let indo = parseInt(prompt(`Masukkan nilai Bahasa Indonesia untuk siswa ke-${i}: `))
+                let ing = parseInt(prompt(`Masukkan nilai Bahasa Inggris untuk siswa ke-${i}: `))
+                let dpk = parseInt(prompt(`Masukkan nilai DPK untuk siswa ke-${i}: `))
+                let agama = parseInt(prompt(`Masukkan nilai Agama untuk siswa ke-${i}: `))
+                let kehadiran = parseInt(prompt(`Masukkan persentase kehadiran untuk siswa ke-${i}: `))
+
+                let rata2Nilai = hitungRata2(mtk, indo, ing, dpk, agama);
+
+                if (rata2Nilai >= 475 && kehadiran == 100) {
+                    juaraKelas = `Siswa ke-${i}`;
+                    break;
+                }
+            }
+
+            return juaraKelas;
+        }
+
+        let juara = cekJuaraKelas();
+
+        if (juara !== 'Tidak ada') {
+            document.write(`Juara kelas adalah ${juara}`);
+        } else {
+            document.write('Tidak ada yang memenuhi syarat');
+        }
+    </script>
+</body>
+</html>

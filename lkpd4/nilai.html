@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menentukan Grade Rata-Rata</title>
+</head>
+<body>
+    <script>
+        let PABP = 70;
+        let MTK = 82;
+        let DPK = 77;  
+
+        let rata2 = (PABP + MTK + DPK) / 3;
+
+        let kategori
+        let angka
+
+        if (rata2 >= 80 && rata2 <= 100) {
+            kategori = "A";
+            angka = "Sangat Baik (80-100)";
+        } else if (rata2 >= 75 && rata2 <= 80) {
+            kategori = 'B';
+            angka = 'Baik (75-80)';
+        } else if (rata2 >= 65 && rata2 <=75) {
+            kategori = 'C';
+            angka = 'Cukup (65-75)';
+        } else if (rata2 >= 45 && rata2 <= 65) {
+            kategori = 'D';
+            angka = 'Kurang (45-65)';
+        } else if (rata2 >= 0 && rata2 <=45) {
+            kategori = 'E';
+            angka = 'Sangat Kurang (0-45)';
+        } else {
+            kategori = 'K';
+        }
+
+        console.log(rata2);
+        console.log(kategori);
+        console.log(angka);
+    </script>
+</body>
+</html>

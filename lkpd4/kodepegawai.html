@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cetak gddmmyyyynn</title>
+</head>
+<body>
+    <script>
+        function kodePegawai(kode) {
+            let golongan = kode[0];
+            let tanggal = kode.substring(1, 3);
+            let bulan = kode.substring(3, 5);
+            let tahun = kode.substring(5, 9);
+            let noUrut = kode.substring(9, 11);
+
+            let namaBulan;
+            switch(bulan) {
+                case'01': namaBulan = 'Januari'; break;
+                case'02': namaBulan = 'Februari'; break;
+                case'03': namaBulan = 'Maret'; break;
+                case'04': namaBulan = 'April'; break;
+                case'05': namaBulan = 'Mei'; break;
+                case'06': namaBulan = 'Juni'; break;
+                case'07': namaBulan = 'Juli'; break;
+                case'08': namaBulan = 'Agustus'; break;
+                case'09': namaBulan = 'September'; break;
+                case'10': namaBulan = 'Oktober'; break;
+                case'11': namaBulan = 'November'; break;
+                case'12': namaBulan = 'Desember'; break;
+            }
+
+            console.log("Golongan: " + golongan);
+            console.log("Tanggal Lahir: " + tanggal + " " + namaBulan + " " + tahun);
+            console.log("Nomor Urut: " + noUrut);
+
+            // console.log(golongan, tanggal, namaBulan, tahun, noUrut)
+        }
+
+        kodePegawai("8280520085")
+    </script>
+</body>
+</html>

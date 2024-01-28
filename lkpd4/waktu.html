@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menambahkan Waktu Selama 1 Detik</title>
+</head>
+<body>
+    <script>
+        const waktuSekarang1 = '02:13:23'; 
+        const waktuSekarang2 = '02:13:59';
+        const waktuSekarang3 = '02:59:59';
+        const waktuSekarang4 = '23:59:59'; 
+
+        const tambahSedetik = (waktuString) => {
+            const [jam, menit, detik] = waktuString.split(':').map(Number);
+            let totalDetik = (jam * 3600) + (menit * 60) + detik;
+            totalDetik = (totalDetik + 1) % (24 * 3600);
+            const jamBaru = Math.floor(totalDetik / 3600);
+            const menitBaru = Math.floor((totalDetik % 3600) / 60);
+            const detikBaru = totalDetik % 60;
+            return [
+                String(jamBaru).padStart(2, '0'),
+                String(menitBaru).padStart(2, '0'),
+                String(detikBaru).padStart(2, '0'),
+            ].join(':');
+        };
+
+        const waktuBaru1 = tambahSedetik(waktuSekarang1);
+        const waktuBaru2 = tambahSedetik(waktuSekarang2);
+        const waktuBaru3 = tambahSedetik(waktuSekarang3);
+        const waktuBaru4 = tambahSedetik(waktuSekarang4);
+
+        console.log(`Waktu awal 1: ${waktuSekarang1}`);
+        console.log(`Waktu setelah ditambahkan 1 detik: ${waktuBaru1}`);
+        console.log(`Waktu awal 2: ${waktuSekarang2}`);
+        console.log(`Waktu setelah ditambahkan 1 detik: ${waktuBaru2}`);
+        console.log(`Waktu awal 3: ${waktuSekarang3}`);
+        console.log(`Waktu setelah ditambahkan 1 detik: ${waktuBaru3}`);
+        console.log(`Waktu awal 4: ${waktuSekarang4}`);
+        console.log(`Waktu setelah ditambahkan 1 detik: ${waktuBaru4}`);
+    </script>
+</body>
+</html>

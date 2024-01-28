@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Detik ke Jam, Menit, dan Detik</title>
+</head>
+<body>
+    <script>
+        let totalDetik = 5440;
+
+        jam = Math.floor (totalDetik / 3600);
+        totalDetik %= 3600;
+        menit = Math.floor (totalDetik / 60);
+        detik = totalDetik % 60;
+
+        console.log(`Jadi total detik dari ${totalDetik} adalah ${jam} : ${menit} : ${detik}`);
+    </script>
+</body>
+</html>
